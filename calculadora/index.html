@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Calculadora</h1></header>
+    <main>
+        <div id="calculadora">
+            <div id="visor">
+
+            </div>
+            <div id="teclado">
+                <button id="num1" class="botao numeral" onclick="inserir('1')">1</button>
+                <button id="num2" class="botao numeral" onclick="inserir('2')">2</button>
+                <button id="num3" class="botao numeral" onclick="inserir('3')">3</button>
+                <button id="num4" class="botao numeral" onclick="inserir('4')">4</button>
+                <button id="num5" class="botao numeral" onclick="inserir('5')">5</button>
+                <button id="num6" class="botao numeral" onclick="inserir('6')">6</button>
+                <button id="num7" class="botao numeral" onclick="inserir('7')">7</button>
+                <button id="num8" class="botao numeral" onclick="inserir('8')">8</button>
+                <button id="num9" class="botao numeral" onclick="inserir('9')">9</button>
+                <button id="num0" class="botao numeral" onclick="inserir('0')">0</button>
+                <button id="virg" class="botao" onclick="inserir('.')">,</button>
+                <button id="soma" class="botao" onclick="inserir('+')">+</button>
+                <button id="subtrai" class="botao" onclick="inserir('-')">-</button>
+                <button id="limpa" class="botao" onclick="clean()">C</button>
+                <button id="calcula" class="botao" onclick="calcular()">=</button>
+            </div>
+        </div>
+</main>
+<script>
+    var visor = document.getElementById('visor')
+    function inserir(num){
+        numero = document.getElementById('visor').innerHTML;
+        visor.innerHTML = numero + num;
+    }
+    function clean(){
+        visor.innerHTML = "";
+    }
+</script>
+</body>
+</html>
