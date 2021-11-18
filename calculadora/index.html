@@ -11,9 +11,7 @@
     <header><h1>Calculadora</h1></header>
     <main>
         <div id="calculadora">
-            <div id="visor">
-
-            </div>
+            <div id="visor"></div>
             <div id="teclado">
                 <button id="num1" class="botao numeral" onclick="inserir('1')">1</button>
                 <button id="num2" class="botao numeral" onclick="inserir('2')">2</button>
@@ -48,6 +46,15 @@
     function apagar(){
         visor =  document.getElementById('visor').innerHTML
         document.getElementById('visor').innerHTML = visor.substring(0, visor.length -1)
+    }
+    function calcular(){
+        visor = document.getElementById('visor').innerHTML
+        if(visor){
+            document.getElementById('visor').innerHTML = eval(visor);
+        }
+        else{
+            document.getElementById('visor').innerHTML = "Nada para calcular"
+        }
     }
 </script>
 </body>
