@@ -31,6 +31,9 @@
                 <button id="limpa" class="botao" onclick="clean()">C</button>
                 <button id="calcula" class="botao" onclick="calcular()">=</button>
             </div>
+            <div>
+                <button class="botao" onclick="apagar()"><--</button>
+            </div>
         </div>
 </main>
 <script>
@@ -41,6 +44,10 @@
     }
     function clean(){
         visor.innerHTML = "";
+    }
+    function apagar(){
+        visor =  document.getElementById('visor').innerHTML
+        document.getElementById('visor').innerHTML = visor.substring(0, visor.length -1)
     }
 </script>
 </body>
