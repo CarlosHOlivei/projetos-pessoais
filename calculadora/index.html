@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Calculadora</h1></header>
+    <header>
+        <h1>Calculadora</h1>
+        <p>Primeiro projeto em que uso Javascript!</p>
+    </header>
     <main>
         <div id="calculadora">
             <div id="visor"></div>
@@ -22,15 +25,18 @@
                 <button id="num7" class="botao numeral" onclick="inserir('7')">7</button>
                 <button id="num8" class="botao numeral" onclick="inserir('8')">8</button>
                 <button id="num9" class="botao numeral" onclick="inserir('9')">9</button>
-                <button id="num0" class="botao numeral" onclick="inserir('0')">0</button>
                 <button id="virg" class="botao" onclick="inserir('.')">,</button>
+                <button id="num0" class="botao numeral" onclick="inserir('0')">0</button>
                 <button id="soma" class="botao" onclick="inserir('+')">+</button>
                 <button id="subtrai" class="botao" onclick="inserir('-')">-</button>
+                <button id="multiplica" class="botao" onclick="inserir('*')">*</button>
+                <button id="divide" class="botao" onclick="inserir('/')">/</button>
                 <button id="limpa" class="botao" onclick="clean()">C</button>
+                <button class="botao" onclick="apagar()">APAGA</button>
                 <button id="calcula" class="botao" onclick="calcular()">=</button>
             </div>
             <div>
-                <button class="botao" onclick="apagar()"><--</button>
+                
             </div>
         </div>
 </main>

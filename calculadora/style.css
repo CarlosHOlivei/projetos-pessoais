@@ -1,11 +1,39 @@
 @charset "utf-8";
 
+:root{
+    --destaque: #63A8A3;
+    --fundo: #C9FFFB;
+    --detalhe: #A8F5EE;
+    --conteudo: #A86E52;
+    --contDetalhe: #F5C2A9;
+}
 body{
+    background-color: var(--fundo);
     padding: 0;
     margin: 0;
 }
+header{
+    background-color:var(--detalhe);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+h1{
+    font-size: 3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--conteudo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.637);
+    margin: 0;
+}
+header p{
+    font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--contDetalhe);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.534);
+    margin: 0;
+}
+
 #calculadora{
-    background-color: darkgray;
+    background-color: var(--conteudo);
     min-width: 100px;
     max-width: 300px;
     height: 600px;
@@ -27,7 +55,7 @@ body{
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.644);
 }
 #teclado{
-    height: 350px;
+    height: 400px;
     margin: 20px 0 0 0;
     padding: 10px;
     display: flex;
@@ -42,11 +70,22 @@ body{
     width: 30%;
     height: 50px;
     font-size: 1em;
-    background-color: white;
+    background-color: var(--contDetalhe);
     border: none;
     border-radius: 3px;
-    box-shadow: 1px 2px 1px 1px #f3f3f3;
+    box-shadow: 1px 2px 1px 1px #f5c2a94d;
+}
+.botao:hover{
+    background-color: hsl(20, 79%, 83%);
+    cursor: pointer;
+}
+.botao:active{
+    background-color: hsl(20, 79%, 90%);
+    box-shadow: none;
 }
 .numeral{
+    color: var(--conteudo);
+    text-shadow: 1px 1px black;
     font-size: 1.5em;
+    font-weight: bold;
 }
