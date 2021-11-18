@@ -41,7 +41,7 @@
         </div>
 </main>
 <script>
-    var visor = document.getElementById('visor')
+    
     function inserir(num){
         numero = document.getElementById('visor').innerHTML;
         visor.innerHTML = numero + num;
@@ -50,13 +50,16 @@
         visor.innerHTML = "";
     }
     function apagar(){
-        visor =  document.getElementById('visor').innerHTML
-        document.getElementById('visor').innerHTML = visor.substring(0, visor.length -1)
+        resultado =  document.getElementById('visor').innerHTML
+        
+        document.getElementById('visor').innerHTML = resultado.substring(0, resultado.length -1)
+        
     }
     function calcular(){
-        visor = document.getElementById('visor').innerHTML
-        if(visor){
-            document.getElementById('visor').innerHTML = eval(visor);
+        resultado = document.getElementById('visor').innerHTML
+        if(resultado){
+            document.getElementById('visor').innerHTML = eval(resultado);
+            return;
         }
         else{
             document.getElementById('visor').innerHTML = "Nada para calcular..."
